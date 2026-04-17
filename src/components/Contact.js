@@ -63,9 +63,9 @@ function Contact() {
             </div>
 
             <div className="social-links">
-              <a href="#" className="social-link">Facebook</a>
-              <a href="#" className="social-link">Instagram</a>
-              <a href="#" className="social-link">Twitter</a>
+              <a href="https://facebook.com" className="social-link" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://instagram.com" className="social-link" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://twitter.com" className="social-link" target="_blank" rel="noreferrer">Twitter</a>
             </div>
           </div>
 
