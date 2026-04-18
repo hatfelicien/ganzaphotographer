@@ -84,11 +84,15 @@ function Gallery() {
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') navigate(1);
-      if (e.key === 'ArrowLeft') navigate(-1);
+      if (!lightbox) return;
+      if (e.key === 'Escape') setLightbox(null);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const idx = filteredItems.findIndex(i => i.id === lightbox.id);
+        setLightbox(filteredItems[(idx + dir + filteredItems.length) % filteredItems.length]);
+      }
     };
-    if (lightbox) window.addEventListener('keydown', onKey);
+    window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [lightbox, filteredItems]);
 
