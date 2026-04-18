@@ -1,4 +1,5 @@
 import React from 'react';
+import { Camera, Mail, Phone, MapPin } from 'lucide-react';
 import './Footer.css';
 
 function Footer() {
@@ -7,10 +8,13 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>📸 PhotoArt</h3>
+            <div className="footer-logo">
+              <Camera size={26} />
+              <h3>Ganza Images</h3>
+            </div>
             <p>Capturing life's beautiful moments with passion and creativity.</p>
           </div>
-          
+
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
@@ -21,30 +25,27 @@ function Footer() {
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-          
+
           <div className="footer-section">
             <h4>Services</h4>
             <ul>
-              <li><a href="#gallery">Wedding Photography</a></li>
-              <li><a href="#gallery">Graduation Photography</a></li>
-              <li><a href="#gallery">Portrait Photography</a></li>
-              <li><a href="#gallery">Event Photography</a></li>
+              <li><a href="#services">Wedding Photography</a></li>
+              <li><a href="#services">Graduation Photography</a></li>
+              <li><a href="#services">Portrait Photography</a></li>
+              <li><a href="#services">Event Photography</a></li>
             </ul>
           </div>
-          
+
           <div className="footer-section">
             <h4>Contact Info</h4>
-            <ul>
-              <li>📧 info@photoart.com</li>
-              <li>📱 +250 788 123 456</li>
-              <li>📍 Kigali, Rwanda</li>
-            </ul>
+            <div className="footer-contact-item"><Mail size={16} /> info@ganzaimages.com</div>
+            <div className="footer-contact-item"><Phone size={16} /> +250 788 123 456</div>
+            <div className="footer-contact-item"><MapPin size={16} /> Kigali, Rwanda</div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
-          <p>&copy; 2024 PhotoArt. All rights reserved.</p>
-          <p>Designed with ❤️ for photographers</p>
+          <p>&copy; 2024 Ganza Images. All rights reserved.</p>
         </div>
       </div>
     </footer>
