@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import aboutPhoto from '../assets/images/about-photo.png';
 
 function About() {
   return (
@@ -8,10 +9,10 @@ function About() {
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
           <div className="about-image">
-            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=500" alt="Photographer" />
+            <img src={aboutPhoto} alt="Photographer" />
           </div>
           <div className="about-text">
-            <h3>Hi, I'm Alex Johnson</h3>
+            <h3>Hi, I'm Ganza Aimable</h3>
             <p className="lead">Professional Photographer with 10+ Years of Experience</p>
             <p>
               I specialize in capturing life's most precious moments through my lens. 
