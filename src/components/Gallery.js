@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Gallery.css';
 
 import babyShower1 from '../assets/images/baby-shower.jpeg';
@@ -66,9 +67,30 @@ function Gallery() {
     { id: 'event', name: 'Events' }
   ];
 
-  const filteredItems = activeFilter === 'all' 
-    ? galleryItems 
+  const [lightbox, setLightbox] = useState(null);
+
+  const filteredItems = activeFilter === 'all'
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeFilter);
+
+  const openLightbox = (item) => setLightbox(item);
+  const closeLightbox = () => setLightbox(null);
+
+  const navigate = (dir) => {
+    const idx = filteredItems.findIndex(i => i.id === lightbox.id);
+    const next = filteredItems[(idx + dir + filteredItems.length) % filteredItems.length];
+    setLightbox(next);
+  };
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') navigate(1);
+      if (e.key === 'ArrowLeft') navigate(-1);
+    };
+    if (lightbox) window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox, filteredItems]);
 
   return (
     <section id="gallery" className="gallery-section">
@@ -91,7 +113,7 @@ function Gallery() {
         {/* Gallery Grid */}
         <div className="gallery-grid">
           {filteredItems.map(item => (
-            <div key={item.id} className="gallery-item">
+            <div key={item.id} className="gallery-item" onClick={() => openLightbox(item)}>
               <img src={item.image} alt={item.title} />
               <div className="gallery-overlay">
                 <h3>{item.title}</h3>
@@ -105,6 +127,18 @@ function Gallery() {
           <p className="no-results">No photos found in this category.</p>
         )}
       </div>
+
+      {lightbox && (
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox}><X size={28} /></button>
+          <button className="lightbox-prev" onClick={(e) => { e.stopPropagation(); navigate(-1); }}><ChevronLeft size={36} /></button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightbox.image} alt={lightbox.title} />
+            <p className="lightbox-title">{lightbox.title}</p>
+          </div>
+          <button className="lightbox-next" onClick={(e) => { e.stopPropagation(); navigate(1); }}><ChevronRight size={36} /></button>
+        </div>
+      )}
     </section>
   );
 }
