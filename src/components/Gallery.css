@@ -1,5 +1,5 @@
 .gallery-section {
-  background: #0a0f1e;
+  background: #ffffff;
 }
 
 .filter-buttons {
@@ -12,26 +12,26 @@
 
 .filter-btn {
   padding: 10px 24px;
-  background: transparent;
-  border: 1px solid rgba(59,130,246,0.3);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 15px;
   font-weight: 500;
-  color: #94a3b8;
+  color: #475569;
 }
 
 .filter-btn:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: #1d4ed8;
+  color: #1d4ed8;
 }
 
 .filter-btn.active {
   background: #1d4ed8;
   color: white;
   border-color: #1d4ed8;
-  box-shadow: 0 4px 15px rgba(29,78,216,0.4);
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
 }
 
 .gallery-grid {
@@ -47,15 +47,13 @@
   border-radius: 10px;
   cursor: pointer;
   height: 300px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-  border: 1px solid rgba(59,130,246,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(29,78,216,0.3);
-  border-color: rgba(59,130,246,0.4);
+  box-shadow: 0 10px 30px rgba(29, 78, 216, 0.2);
 }
 
 .gallery-item img {
@@ -72,7 +70,7 @@
 .gallery-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(10,15,30,0.95), transparent);
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
   color: white;
   padding: 20px;
   transform: translateY(100%);
@@ -89,7 +87,7 @@
 .no-results {
   text-align: center;
   font-size: 1.2rem;
-  color: #64748b;
+  color: #94a3b8;
   padding: 50px 0;
 }
 

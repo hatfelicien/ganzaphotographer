@@ -1,12 +1,11 @@
 .header {
-  background: rgba(10, 15, 30, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .navbar {
@@ -23,18 +22,17 @@
 }
 
 .logo svg {
-  color: #3b82f6;
+  color: #1d4ed8;
 }
 
 .logo h1 {
   font-size: 1.6rem;
-  color: #f1f5f9;
+  color: #0f172a;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .logo h1 span {
-  color: #3b82f6;
+  color: #1d4ed8;
 }
 
 .nav-menu {
@@ -44,15 +42,14 @@
 
 .nav-menu a {
   text-decoration: none;
-  color: #94a3b8;
+  color: #475569;
   font-weight: 500;
   transition: color 0.3s ease;
   font-size: 15px;
-  letter-spacing: 0.3px;
 }
 
 .nav-menu a:hover {
-  color: #3b82f6;
+  color: #1d4ed8;
 }
 
 .hamburger {
@@ -64,7 +61,7 @@
 .hamburger span {
   width: 25px;
   height: 2px;
-  background: #94a3b8;
+  background: #475569;
   margin: 4px 0;
   transition: 0.3s;
 }
@@ -77,13 +74,13 @@
     left: -100%;
     top: 65px;
     flex-direction: column;
-    background: #0d1526;
+    background: #ffffff;
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.08);
     padding: 20px 0;
-    border-bottom: 1px solid rgba(59,130,246,0.2);
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .nav-menu.active { left: 0; }
