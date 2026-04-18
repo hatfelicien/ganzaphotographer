@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 import './Contact.css';
 
 function Contact() {
@@ -38,7 +38,7 @@ function Contact() {
             <div className="social-links">
               <a href="https://facebook.com"  className="social-link" target="_blank" rel="noreferrer"><Facebook size={16} /> Facebook</a>
               <a href="https://instagram.com" className="social-link" target="_blank" rel="noreferrer"><Instagram size={16} /> Instagram</a>
-              <a href="https://twitter.com"   className="social-link" target="_blank" rel="noreferrer"><Twitter size={16} /> Twitter</a>
+              <a href="https://twitter.com"   className="social-link" target="_blank" rel="noreferrer">𝕏 Twitter</a>
             </div>
           </div>
 
