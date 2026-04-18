@@ -1,33 +1,68 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 
+import babyShower1 from '../assets/images/baby-shower.jpeg';
+import babyShower2 from '../assets/images/baby-shower2.jpeg';
+import babyShower3 from '../assets/images/baby-shower3.jpeg';
+import babyShower4 from '../assets/images/baby-shower4.jpeg';
+import babyShower5 from '../assets/images/baby-shower5.jpeg';
+import birthday from '../assets/images/birthday.jpeg';
+import birthday1 from '../assets/images/birthday1.jpeg';
+import family from '../assets/images/family.jpeg';
+import family1 from '../assets/images/family1.jpeg';
+import family2 from '../assets/images/family2.jpeg';
+import family3 from '../assets/images/family3.jpeg';
+import family4 from '../assets/images/family4.jpeg';
+import family5 from '../assets/images/family5.jpeg';
+import family6 from '../assets/images/family6.jpeg';
+import indoor1 from '../assets/images/indoor1.jpeg';
+import indoor2 from '../assets/images/indoor2.jpeg';
+import indoor3 from '../assets/images/indoor3.jpeg';
+import indoor4 from '../assets/images/indoor4.jpeg';
+import indoor5 from '../assets/images/indoor5.jpeg';
+import studio1 from '../assets/images/studio1.jpeg';
+import studio2 from '../assets/images/studio2.jpeg';
+import studio3 from '../assets/images/studio3.jpeg';
+import wedding1 from '../assets/images/wedding1.jpeg';
+import wedding2 from '../assets/images/wedding2.jpeg';
+import wedding3 from '../assets/images/wedding3.jpeg';
+
 function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  // Sample gallery data - replace with your actual images
   const galleryItems = [
-    { id: 1, category: 'wedding', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600', title: 'Wedding Ceremony' },
-    { id: 2, category: 'wedding', image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600', title: 'Bride Portrait' },
-    { id: 3, category: 'wedding', image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600', title: 'Wedding Reception' },
-    { id: 4, category: 'graduation', image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600', title: 'Graduation Day' },
-    { id: 5, category: 'graduation', image: 'https://images.unsplash.com/photo-1627556704302-624286467c65?w=600', title: 'Graduate Portrait' },
-    { id: 6, category: 'graduation', image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600', title: 'Graduation Ceremony' },
-    { id: 7, category: 'portrait', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600', title: 'Professional Portrait' },
-    { id: 8, category: 'portrait', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600', title: 'Studio Portrait' },
-    { id: 9, category: 'portrait', image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600', title: 'Outdoor Portrait' },
-    { id: 10, category: 'event', image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600', title: 'Corporate Event' },
-    { id: 11, category: 'event', image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600', title: 'Birthday Party' },
-    { id: 12, category: 'event', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600', title: 'Conference' },
-    { id: 13, category: 'wedding', image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600', title: 'Wedding Rings' },
-    { id: 14, category: 'graduation', image: 'https://images.unsplash.com/photo-1622495894030-3c5cd6c6b1c0?w=600', title: 'Graduation Group' },
-    { id: 15, category: 'portrait', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600', title: 'Fashion Portrait' },
+    { id: 1, category: 'wedding', image: wedding1, title: 'Wedding Ceremony' },
+    { id: 2, category: 'wedding', image: wedding2, title: 'Wedding Moments' },
+    { id: 3, category: 'wedding', image: wedding3, title: 'Wedding Reception' },
+    { id: 4, category: 'portrait', image: studio1, title: 'Studio Portrait' },
+    { id: 5, category: 'portrait', image: studio2, title: 'Studio Session' },
+    { id: 6, category: 'portrait', image: studio3, title: 'Studio Shoot' },
+    { id: 7, category: 'portrait', image: indoor1, title: 'Indoor Portrait' },
+    { id: 8, category: 'portrait', image: indoor2, title: 'Indoor Session' },
+    { id: 9, category: 'portrait', image: indoor3, title: 'Indoor Shoot' },
+    { id: 10, category: 'portrait', image: indoor4, title: 'Indoor Portrait 2' },
+    { id: 11, category: 'portrait', image: indoor5, title: 'Indoor Session 2' },
+    { id: 12, category: 'family', image: family, title: 'Family Portrait' },
+    { id: 13, category: 'family', image: family1, title: 'Family Moments' },
+    { id: 14, category: 'family', image: family2, title: 'Family Session' },
+    { id: 15, category: 'family', image: family3, title: 'Family Shoot' },
+    { id: 16, category: 'family', image: family4, title: 'Family Together' },
+    { id: 17, category: 'family', image: family5, title: 'Family Love' },
+    { id: 18, category: 'family', image: family6, title: 'Family Joy' },
+    { id: 19, category: 'event', image: birthday, title: 'Birthday Celebration' },
+    { id: 20, category: 'event', image: birthday1, title: 'Birthday Party' },
+    { id: 21, category: 'event', image: babyShower1, title: 'Baby Shower' },
+    { id: 22, category: 'event', image: babyShower2, title: 'Baby Shower Moments' },
+    { id: 23, category: 'event', image: babyShower3, title: 'Baby Shower Joy' },
+    { id: 24, category: 'event', image: babyShower4, title: 'Baby Shower Celebration' },
+    { id: 25, category: 'event', image: babyShower5, title: 'Baby Shower Love' },
   ];
 
   const categories = [
     { id: 'all', name: 'All Photos' },
     { id: 'wedding', name: 'Weddings' },
-    { id: 'graduation', name: 'Graduations' },
     { id: 'portrait', name: 'Portraits' },
+    { id: 'family', name: 'Family' },
     { id: 'event', name: 'Events' }
   ];
 
